@@ -550,18 +550,18 @@ export function isTabs() {
 	const tabsBtn = document.querySelectorAll('.popular__tabs-title')
 	const tabsItems = document.querySelectorAll('.popular__tabs-body')
 
-	tabsBtn.forEach(function(item) {
-		item.addEventListener('click', function() {
+	tabsBtn.forEach(function (item) {
+		item.addEventListener('click', function () {
 			let currentBtn = item;
 
 			let tabId = currentBtn.getAttribute('data-tab')
 			let currentTab = document.querySelector(tabId)
 
-			if(!currentBtn.classList.contains('_tab-active')) {
-				tabsBtn.forEach(function(item) {
+			if (!currentBtn.classList.contains('_tab-active')) {
+				tabsBtn.forEach(function (item) {
 					item.classList.remove('_tab-active')
 				})
-				tabsItems.forEach(function(item) {
+				tabsItems.forEach(function (item) {
 					item.classList.remove('_tab-active')
 				})
 				currentBtn.classList.add("_tab-active")
@@ -570,5 +570,5 @@ export function isTabs() {
 		})
 	})
 	document.querySelector('.popular__tabs-title').click()
-	
+
 }
